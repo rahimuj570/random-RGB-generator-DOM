@@ -18,12 +18,19 @@ function rgbGenerate(color) {
 // ==========RGB Copy Handler=========
 document.getElementById("copy-btn").addEventListener("click", function () {
   const copyTxt = query("#rgb-field").value;
-  /*   -----Way No.1-------- */
-  query("#rgb-field").select();
-  document.execCommand("copy");
-  query("#copy-btn").style.display = "none";
-  query("#copy-btn-suc").style.display = "block";
-  setTimeout(copyHide, 3000);
+  if (copyTxt !== "") {
+    /*   -----Way No.1-------- */
+    query("#rgb-field").select();
+    document.execCommand("copy");
+    query("#copy-btn").style.display = "none";
+    query("#copy-btn-suc").style.display = "block";
+    query("#rgb-field").style.border = "3px solid gray";
+    setTimeout(copyHide, 3000);
+  } else {
+    query("#rgb-field").placeholder =
+      "You Need To Generate RGB Code Before Copy";
+    query("#rgb-field").style.border = "5px solid red";
+  }
 
   /*   -----Way No.2-------- */
   //   navigator.clipboard.writeText(copyTxt);
