@@ -1,5 +1,4 @@
 // ===========RGB Generate Handler=========
-document.querySelector("#copy-btn-suc").style.display = "none";
 document.getElementById("generate-btn").addEventListener("click", function () {
   const red = rgbGenerate();
   const green = rgbGenerate();
