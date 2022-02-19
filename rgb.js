@@ -41,3 +41,6 @@ function copyHide() {
   query("#copy-btn").style.display = "block";
   query("#copy-btn-suc").style.display = "none";
 }
+if (location.reload) {
+  query("#rgb-field").value = "";
+}
