@@ -20,7 +20,6 @@ function rgbGenerate(color) {
 document.getElementById("copy-btn").addEventListener("click", function () {
   const copyTxt = query("#rgb-field").value;
   /*   -----Way No.1-------- */
-  query("#rgb-field").focus();
   query("#rgb-field").select();
   document.execCommand("copy");
   query("#copy-btn").style.display = "none";
