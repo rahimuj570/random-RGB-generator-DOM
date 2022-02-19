@@ -14,6 +14,18 @@ function rgbGenerate(color) {
   return float2Int + "";
 }
 
+// ==========RGB Copy=========
+document.getElementById("copy-btn").addEventListener("click", function () {
+  const copyTxt = query("#rgb-field").value;
+  /*   -----Way No.1-------- */
+  query("#rgb-field").focus();
+  query("#rgb-field").select();
+  document.execCommand("copy");
+
+  /*   -----Way No.2-------- */
+  //   navigator.clipboard.writeText(copyTxt);
+});
+
 //===========Query Selector==========
 query = (idClass) => {
   return document.querySelector(idClass);
